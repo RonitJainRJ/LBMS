@@ -1,0 +1,9 @@
+{
+  "addStudent" : "INSERT INTO lbms.studentdetails (seat_number, name, joining_date, paid_upto, student_shift) values (%L, %L, %L, %L, %L)",
+  "getAllStudents" : "SELECT * FROM LBMS.STUDENTDETAILS",
+  "getHalfDayStudents" : "SELECT * FROM LBMS.STUDENTDETAILS WHERE student_shift = 'half'",
+  "getFullDayStudents" : "SELECT * FROM LBMS.STUDENTDETAILS WHERE student_shift = 'full'",
+  "getStudentBySeat" : "SELECT * FROM LBMS.STUDENTDETAILS WHERE seat_number = %L",
+  "deleteStudentBySeat" : "DELETE FROM lbms.StudentDetails WHERE seat_number = %L",
+  "updateStudent" : "UPDATE lbms.StudentDetails SET name = %L, paid_upto = %L, student_shift = %L, updated_at = GETDATE() WHERE seat_number = %L"
+}
