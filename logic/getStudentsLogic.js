@@ -24,6 +24,7 @@ const getStudentsLogic = (category) => {
                     let formattedquery = format(dbQuery.getAllStudents, category);
                     result = await dbrequest(formattedquery).catch(err => reject(err));
                 } 
+                result.sort((a, b) => a.seat_number - b.seat_number);
                   
                 
                 resolve(result)                                    
